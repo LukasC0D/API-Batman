@@ -10,43 +10,72 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 <style>
-    body {
-        box-sizing: border-box;
 
+    body{
+       font-family:  Arial, Helvetica, sans-serif;
+       background: rgb(228, 228, 228);
     }
-
+ 
     .box {
         display: flex;
         text-align: center;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .box img {
-        margin-right: 20px;
+        margin: 20px ;
+        width: 350px;
+        height: 500px;
+
     }
 
-    .h1 {
-        display: flex;
-        justify-content: center;
+    h1 {
+       text-align: center;
+       padding: 50px;
+       font-weight: 700;
+       font-size: 50px;
     }
 
     .button {
+        padding: 20px;
         display: flex;
         justify-content: center;
+       
       
 
     }
 
     .btn {
+        
         margin: 20px;
+        
+ 
+     
     }
     .pageNumber{
-        margin-top: 28px;
+        margin-top: 35px;
+        font-size: larger;
     }
+    .innerBox h5{
+        padding: 30px;
+        width: 300px;
+        margin-left: 40px;
+        font-weight: 700;
+    }
+    .innerBox p{
+        font-size: large;
+        font-style: italic;
+      
+    }
+
+
+
+
 </style>
 
 <body>
-    <h1 style="text-align: center;">Filmų sąrašas</h1>
+    <h1>Filmų sąrašas</h1>
     <div class="box"></div>
     <div class="button">
 
@@ -80,7 +109,7 @@
             for (let i = 0; i < 10; i++) {
                
                 
-                html.innerHTML +=`<div>
+                html.innerHTML +=`<div class="innerBox">
                                         
                                     <img src="${resp.Search[i].Poster}" alt="" />
                                     <h5> ${resp.Search[i].Title}</h5>
