@@ -87,13 +87,13 @@
 
 
 
-        let Page = 1
+        let Page = 1 
         
 
 
         let html = document.querySelector('.box')
         let btn = document.querySelector('.button')
-       
+        
 
         const getData = async (url) => {
             try {
@@ -121,49 +121,45 @@
                                 
 
             }
-            
-     
-       
+    
             pagenr.innerHTML = `<p>Puslapis: ${Page}</p>`
-
-           
 
         }
       
+    
 
         btn.innerHTML += `<button class="btn btn-danger" onclick="Previous()" >Previous</button>
-
-        <p class="pageNumber"></p>
-<button class="btn btn-danger" onclick="Next()">Next</button>
-`         
+                          <p class="pageNumber"></p>
+                          <button class="btn btn-danger" onclick="Next()">Next</button>`
+                                 
         
          
 
-        
+       let pagenr = document.querySelector('.pageNumber')
 
-     let pagenr = document.querySelector('.pageNumber')
+    
        
 
         showData()
 
-       
+    
+       pagenr.innerHTML = `<p>Puslapis: ${Page }</p>`
 
         const Next = () => {
-
+            if(Page!=52){
             html.innerHTML = ''
-            Page += 1
+            Page++
             console.log('button veikia')
-           
-
-
             showData()
+
+        }
 
         }
 
         const Previous = () => {
             if (Page > 1) {
                 html.innerHTML = ''
-                Page -= 1
+                Page--
                 console.log('button veikia')
                 showData()
             }
